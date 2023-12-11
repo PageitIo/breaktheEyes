@@ -29,10 +29,12 @@ use Statamic\Data\TracksQueriedColumns;
 use Statamic\Data\TracksQueriedRelations;
 use Statamic\Events\EntryBlueprintFound;
 use Statamic\Events\EntryCreated;
+use Statamic\Events\EntryCreating;
 use Statamic\Events\EntryDeleted;
 use Statamic\Events\EntryDeleting;
 use Statamic\Events\EntrySaved;
 use Statamic\Events\EntrySaving;
+use Statamic\Exceptions\BlueprintNotFoundException;
 use Statamic\Facades;
 use Statamic\Facades\Antlers;
 use Statamic\Facades\Blink;
@@ -141,6 +143,10 @@ class Entry implements Arrayable, ArrayAccess, Augmentable, ContainsQueryableVal
                 }
 
                 $blueprint = $this->collection()->entryBlueprint($blueprint, $this);
+
+                if (! $blueprint) {
+                    throw new BlueprintNotFoundException($this->value('blueprint'), 'collections/'.$this->collection()->handle());
+                }
 
                 Blink::put($key, $blueprint);
 
@@ -317,6 +323,10 @@ class Entry implements Arrayable, ArrayAccess, Augmentable, ContainsQueryableVal
         $this->afterSaveCallbacks = [];
 
         if ($withEvents) {
+            if ($isNew && EntryCreating::dispatch($this) === false) {
+                return false;
+            }
+
             if (EntrySaving::dispatch($this) === false) {
                 return false;
             }
@@ -942,6 +952,8 @@ class Entry implements Arrayable, ArrayAccess, Augmentable, ContainsQueryableVal
 
         return (string) Antlers::parse($format, array_merge($this->routeData(), [
             'site' => $this->site(),
+            'uri' => $this->uri(),
+            'url' => $this->url(),
             'permalink' => $this->absoluteUrl(),
             'locale' => $this->locale(),
         ]));
