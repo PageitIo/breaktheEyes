@@ -50,7 +50,7 @@
                     <div data-aos="zoom-in-up" class="col-md-6 _btheservicecard">
                         <a href="{{route('p_photography')}}">
                             <div class="card _bthecard" style="position: relative;">
-                              <img src="{{asset('assets/static/site-images/portrait-photography-banner.jpg')}}" class="img-fluid" alt="Portrait Photography" loading="lazy">
+                              <img src="{{asset('assets/static/site-images/portrait-photography-banner-small.jpg')}}" class="img-fluid" alt="Portrait Photography" loading="lazy">
                               <div class="card-overlay">
                                 <div class="overlay-content">
                                   <span class="text-left _bthecard_text">Portrait Photography</span>
