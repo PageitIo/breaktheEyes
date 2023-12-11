@@ -1,0 +1,774 @@
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('../fonts/NeueMontreal-Bold.woff2') format('woff2'),
+         url('../fonts/NeueMontreal-Light.woff2') format('woff2'),
+         url('../fonts/NeueMontreal-Medium.woff2') format('woff2'),
+         url('../fonts/NeueMontreal-Regular.woff2') format('woff2'),
+         
+    /* Other font properties (e.g., font-weight, font-style) can be specified here */
+  }
+  
+
+  .underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+
+  .underline-animation::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff; /* Change this to your desired underline color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .underline-animation:hover::after {
+    transform: scaleX(1);
+  }
+/* Browser scroll */
+
+/* For WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 50%;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: red;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: darkred;
+  }
+  
+  ._btheBttn{
+    border-radius: 50px;
+  }
+/* Header*/
+
+._btheNavbar{
+    padding-left: 25px;
+    padding-right: 50px;
+    border-radius: 15px;
+    background: #fff;
+}
+
+
+@media (max-width:991.98px){
+    ._btheNavbar{
+        background: none;
+    }
+
+    ._btheNavbar{
+        padding-left: 0px !important;
+    }
+}
+
+.custom-hr {
+    background-image: url('../static/brand/line-hr.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1px;
+    width:8%;
+  }
+
+
+.btn-red{
+    background: var( --bs-red);
+    color: #fff;
+   width: 118px; 
+}
+
+.btn-red:hover{
+    border: solid var( --bs-red);
+    color: #000;
+    width: 118px;
+}
+
+.btn-black{
+    background: var( --bs-black);
+    color: #fff;
+   width: 118px; 
+}
+
+.btn-black:hover{
+    border: solid var( --bs-black);
+    color: #000;
+    width: 118px;
+}
+
+
+@media (max-width:690px){
+    ._bthePills{
+       display: none !important;
+    }
+    .custom-hr{
+        display: none !important;
+    }
+}
+
+._bthHborder{
+    padding-bottom: 2rem;
+    border-bottom: solid 1px #000;
+}
+
+/* End Header*/
+
+/* Home Page Sec 1 */
+
+._btheFontReg{
+    font-family:'NeueMontreal-Regular', sans-serif !important;
+   
+}
+
+._bthe-eye {
+    background-image: url('../static/brand/brand-eye.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 37px;
+    height: 25px;
+    background-position: center center;
+    padding-top: 7px
+  }
+
+.bttn-pill-black{
+    text-transform: uppercase;
+    width: auto;
+    max-width: 70%;
+    background: #000;
+    color: #fff;
+}
+
+
+.bttn-pill-black:hover{
+    text-transform: uppercase;
+    width: auto;
+    max-width: 70%;
+    border-color:var( --bs-black);
+    color: var( --bs-black);
+}
+
+.bttn-pill-white{
+    text-transform: uppercase;
+    width: 40%;
+    max-width: 70%;
+    background: #fff;
+    color: #000;
+}
+
+.bttn-pill-white:hover{
+    text-transform: uppercase;
+    width: 35%;
+    max-width: 70%;
+    background: #000;
+    color: #fff;
+    border: #fff solid 0.5px;
+}
+
+
+  
+  
+._btheslantline {
+    position: relative;
+  }
+  
+  ._btheslantline::after {
+    content: url('../static/brand/line-hr-slant.svg');
+    position: absolute;
+    right:0;
+    top: 50%;
+    transform: translateY(-80%);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -22px;
+  }
+
+
+  @media (max-width:767.98px){
+    ._btheslantline{
+        display: none;
+    }
+
+    ._btheservicecard{
+        margin-bottom: 2rem !important;
+    }
+  }
+  
+  
+/* Home page sec 2*/
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0rem 1.5rem 1.3rem 1.3rem;
+    color: #fff;
+    border-radius: 10px;
+   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)); */
+  }
+
+  .card-overlay .card:hover{
+    background: none !important
+  }
+  .overlay-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .overlay-content .text-left {
+    flex-grow: 1;
+    /*margin-right: 10px; */
+  }
+  
+
+  ._bthecard{
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    border: none !important;
+  }
+
+  ._bthecard .card-body {
+    flex-grow: 1;
+  }
+  
+
+  ._bthecard > img{
+    border-radius: 10px;
+  }
+  
+  ._bthecard_text{
+    font-size: 1.3rem;
+  }
+
+  ._bthecard_arrow {
+    font-size: 2rem;
+  }
+
+  ._bthecard_arrow {
+    display: none;
+  }
+  
+  ._bthecard:hover ._bthecard_arrow {
+    display: inline-block;
+  }
+  
+
+  
+  ._bthecard:hover {
+    transform: scale(1.04);
+    border: none !important;
+  }
+  
+
+  /* Third section*/
+  ._btheBckGrey{
+    background: #D3D3D3;
+    margin-top: -7px;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  ._btheblackline{
+    color: #000;
+    opacity: 1;
+  }
+
+  ._btheswhiteline{
+    color: #fff;
+    opacity: 1;
+  }
+
+  ._btheclient{
+    border: 1px solid; 
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 120px;
+  }
+  
+
+._btheclientlogo{
+    display: block; 
+    margin: 0 auto;
+}
+
+/*Section 4 */
+
+._btheBckblack{
+    margin-top: -7px;
+    background: #1D1D1B;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+ }
+
+
+ ._bthe_hidden {
+    display: none;
+  }
+  
+  .card:hover ._bthe_hidden {
+    display: block;
+  }
+  
+._bthearrowwight{
+    font-size: 35px;
+    color: #fff;
+}
+
+
+
+/* Footer section */
+._bthemenutext{
+    text-transform: uppercase;
+}
+
+.footer-text{
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: 'NeueMontreal-Regular', sans-serif;
+}
+
+
+
+
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    line-height: 45px;
+}
+
+.footer-icon{
+    font-size: 25px;
+    color: #ffff;
+}
+
+.btn-bthe-frm{
+    background: #BE1622;
+    margin-left: 15px;
+    color: #fff;
+    height: 54px;
+    width: 167.12px;
+}
+
+.btn-bthe-frm:hover{
+    background: #BE1622;
+    margin-left: 15px;
+    color: #fff;
+    height: 54px;
+    width: 167.12px;
+}
+
+._bthe_form{
+    height: 54px !important;
+    width: 323px;
+    border: 0px;
+    background: #1D1D1B;
+    padding: 20px;
+    color: #fff;
+}
+._bthe_form:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  
+  /* End footer */
+
+
+  /* About us page */
+
+
+  ._bthe_page_title_text{
+    font-size: 1.5rem;
+    font-family: 'NeueMontreal-Regular', sans-serif;
+  }
+
+  .tribe-banner{
+    padding-top: 97px;
+  }
+
+  ._bthe_page_title {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  ._bthe_contact_title{
+    font-size: 8.9rem;
+  }
+
+  ._btheabttext{
+    font-size: 3.9rem !important;
+
+  }
+
+  ._bthemasterfnt{
+    font-size: 4rem !important;
+    color: #fff;
+  }
+  
+  @media (max-width: 576px) {
+    ._bthe_page_title {
+      font-size: 2rem !important;
+    }
+
+    ._btheabttext{
+        font-size: 3rem !important;
+    }
+
+    ._btheBckblack{
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+    .contact-bttm-text{
+        padding-left: 0rem !important;
+    }
+
+    ._bthe_contact_title{
+        font-size: 3rem;
+    }
+
+    .btn-bthe-frm{
+      width: 100% !important;
+      margin-left: 0px !important;
+    }
+
+    ._bthe_form{
+      width: 100% !important;
+    }
+
+    ._bthemasterfnt{
+      font-size: 2.5rem !important;
+    }
+  }
+
+  .contact-bttm-text{
+    padding-left: 10rem;
+}
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    ._bthe_page_title {
+      font-size: 4rem !important;
+    }
+    .contact-bttm-text{
+        padding-left: 0rem !important;
+    }
+
+    ._btheabttext{
+        font-size: 4rem !important;
+    }
+    ._bthe_contact_title{
+        font-size: 4rem;
+    }
+
+
+  }
+
+  @media (min-width: 768px) and (max-width:990px) {
+    ._bthe_page_title{
+        font-size: 2.7rem;
+    }
+
+    ._bthe_contact_title{
+        font-size: 2.7rem;
+    }
+
+  
+    
+    ._btheabttext{
+        font-size: 2.7rem;
+    }
+}
+
+._btheposition{
+    text-transform: uppercase;
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding-left: 20px;
+}
+
+
+
+
+  
+
+
+.bg-whipe-pull {
+    background-color: #007700;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin-top: 14rem;
+   
+  }
+  
+  .romeo {
+    position: relative;
+  }
+
+
+
+  /* Live recording */
+  .page-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 64px 0;
+    height: 12rem;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+
+  .decoration-no{
+    text-decoration: none;
+  }
+
+  .breadcrumb-item+.breadcrumb-item::before{
+    color: #be1622;
+  }
+  
+
+  .brd-15{
+    border-radius: 5px;
+  }
+
+  ._btheBckgreen{
+    background: #539987;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .b-0{
+
+    border: 0px;
+  }
+
+  .b-10{
+    border-radius: 10px;
+  }
+
+  
+  ._btheBckcolor {
+    background-color: #EDD4B2;
+    height: 30vh;
+    margin-top: -158px;
+  }
+
+  ._btheBckcolorlgreen {
+    background-color: #7EBDC2;
+    height: 30vh;
+    margin-top: -158px;
+  }
+
+
+   
+  ._btheBckcolorgr {
+    background-color: #539987;
+    height: 30vh;
+    margin-top: -158px;
+  }
+
+
+  /* Portrait photography */
+  ._bthetextlist{
+    font-size: 2rem;
+    padding-left: 10px;
+  }
+
+  ._bth_portrait_text{
+    padding-top: 60px;
+
+  }
+
+  .ln-6{
+    line-height: 6;
+  }
+  
+
+  
+  .progress-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  #progress-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #progress-bar {
+    fill: none;
+    stroke: #be1622;
+    stroke-width: 10;
+    stroke-dasharray: 283, 283;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dasharray 0.3s ease-in-out;
+  }
+
+  .swiper-scrollbar-drag{
+    background: #BE1622 !important;
+    margin-bottom: -2px;
+  }
+  
+  
+  .swiper-container {
+    margin-top: 120px;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Fine art*/
+  ._btheBckcolorylw {
+    background-color: #EFDD8D;
+    height: 30vh;
+    margin-top: -158px;
+  }
+
+
+  /* Contact us page */
+
+  ._bthecontact_form{
+    background: none;
+    border: 0px;
+    border-bottom: 1px solid #fff;
+    border-radius: 0px;
+    color: #fff;
+  }
+
+  ._bthecontact_form:focus{
+    outline: #BE1622;
+    box-shadow: none !important;
+    border-bottom: 1px #BE1622;
+  }
+
+  .text-cap{
+    text-transform: uppercase;
+  }
+  
+
+  /* Case study */
+
+  ._bthscsbody{
+    background: #2C2C2C;
+  }
+
+  ._bthscspill{
+    background: #BE1622;
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 0.3rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-right: 5px;
+  }
+  
+
+  .zoom-card {
+    overflow: hidden;
+  }
+  
+  .zoom-card img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .zoom-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .zoom-card:hover .card-body {
+    transition: background-color 0.3s ease-in-out;
+    background-color: #555555;
+  }
+  
+
+  .card-body >a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+
+  .red-dot{
+    color: #BE1622;
+  }
+
+  
+  /* Mobile icon */
+
+  .navbar-toggler:focus{
+    border: 0;
+  }
+
+
+  /*kwndk */
+
+  .menu {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-item {
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu-item:hover {
+    background-color: #ccc;
+  }
+  
+  ._bthe_mobile_menu_text{
+    font-size: 48px;
+    color: #fff;
+  }
+
+  

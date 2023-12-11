@@ -1,0 +1,12 @@
+name: Romeo
+super: true
+id: 8b97e73c-3599-4c44-9d0d-3bbd411e8ebc
+password_hash: $2y$10$OzgQlyMdnI/URJHpwRoSe.hLOFgMgC0wd/RIS.oq7VMJ7kJEeC6we
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+    p_photography:
+      after_save: continue_editing
+    case_study:
+      after_save: continue_editing

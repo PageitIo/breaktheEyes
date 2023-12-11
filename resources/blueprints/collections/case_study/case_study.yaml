@@ -1,0 +1,185 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: case_description
+            field:
+              antlers: false
+              type: textarea
+              display: Description
+              icon: textarea
+              instructions: 'Add the description of the case study'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: featured_image
+            field:
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Featured Image'
+              icon: assets
+              instructions: |-
+                Image to be shown on project page
+                Image must be 1600 × 900
+              listable: true
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              max_files: 1
+              min_files: 1
+              folder: static/uploads/case-study
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+  case_study_detail:
+    display: 'Case Study Detail'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: challenge_heading
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Challenge Heading'
+              icon: text
+              instructions: 'Heading for the challenge, solution and result'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: challenge
+            field:
+              antlers: false
+              type: textarea
+              display: 'Challenge Text'
+              icon: textarea
+              instructions: 'Details about the challenge'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: solution_text
+            field:
+              antlers: false
+              type: textarea
+              display: 'Solution Text'
+              icon: textarea
+              instructions: 'Details about the solution'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: result_text
+            field:
+              antlers: false
+              type: textarea
+              display: 'Result Text'
+              icon: textarea
+              instructions: 'Details about the result'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  images:
+    display: Images
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: case_images
+            field:
+              max_files: 12
+              mode: grid
+              container: assets
+              folder: static/uploads
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Images
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  video:
+    display: Video
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: case_url_video
+            field:
+              type: link
+              display: 'Case URl Video'
+              icon: link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  services:
+    display: Services
+    sections:
+      -
+        display: 'Select the services'
+        fields:
+          -
+            handle: service_list
+            field:
+              default:
+                - Photograpy
+                - Videography
+              type: list
+              display: 'Service List'
+              icon: list
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+title: 'Case Study'

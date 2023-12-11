@@ -1,0 +1,227 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+  project_1:
+    display: 'Project 1'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: project_image_1
+            field:
+              mode: grid
+              container: assets
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Project Image 1'
+              icon: assets
+              listable: true
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              instructions: 'Note* Image must me 1794 × 1920 to maintain proper proportions in the frontend'
+              max_files: 1
+          -
+            handle: project_1_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Project 1 Title'
+              icon: text
+              instructions: 'Type in the Title of the project image'
+              listable: true
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_1_description
+            field:
+              antlers: false
+              type: textarea
+              display: 'Project 1 Description'
+              icon: textarea
+              instructions: 'Add a short description about the project'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_1_link
+            field:
+              type: link
+              display: 'Project 1 Link'
+              icon: link
+              instructions: 'Add a link to the project'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  project_2:
+    display: 'Project 2'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: project_image_2
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              folder: static/uploads
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Project Image 2'
+              icon: assets
+              instructions: 'Note* Image must me 1794 × 1920 to maintain proper proportions in the frontend'
+              listable: true
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_2_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Project 2 Title'
+              icon: text
+              instructions: 'Type in the Title of the project image'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_2_description
+            field:
+              antlers: false
+              type: textarea
+              display: 'Project two description'
+              icon: textarea
+              instructions: 'Add a short description about the project'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_2_link
+            field:
+              type: link
+              display: 'Project 2 Link'
+              icon: link
+              instructions: 'Add the project link here'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  project_3:
+    display: 'Project 3'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: project_3_image
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              folder: static/uploads
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Projeect 3 Image'
+              icon: assets
+              instructions: 'Note* Image must me 3885 × 1956 to maintain proper proportions in the frontend'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_3_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Project 3 Title'
+              icon: text
+              instructions: 'Type in the Title of the project image'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_3_description
+            field:
+              antlers: false
+              type: textarea
+              display: 'Project 3 Description'
+              icon: textarea
+              instructions: 'Add a short description about the project'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_3_link
+            field:
+              type: link
+              display: 'Project 3 Link'
+              icon: link
+              instructions: 'Add a link to the project'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

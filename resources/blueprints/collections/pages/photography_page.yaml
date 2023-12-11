@@ -1,0 +1,87 @@
+title: 'Photography Page'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              instructions_position: above
+              listable: true
+              visibility: visible
+              input_type: text
+              antlers: true
+              hide_display: false
+          -
+            handle: romeo
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Text Field'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: layout
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Layout
+              icon: template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+  slider_images:
+    display: 'Slider Images'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: sliders
+            field:
+              max_files: 10
+              mode: grid
+              container: assets
+              folder: static/uploads
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Sliders
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

@@ -1,0 +1,15 @@
+title: 'Case Study'
+template: pages/caseStudyDetail
+layout: pages/caseStudyDetail
+revisions: false
+route: '/projects/{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: private
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

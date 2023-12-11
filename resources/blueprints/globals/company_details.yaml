@@ -1,0 +1,6 @@
+tabs:
+  new_tab:
+    display: 'New Tab'
+    sections:
+      -
+        display: 'New Section'
