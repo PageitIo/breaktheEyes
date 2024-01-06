@@ -56,7 +56,7 @@
 
 ._btheNavbar{
     padding-left: 25px;
-    padding-right: 50px;
+    padding-right: 24px;
     border-radius: 15px;
     background: #fff;
 }
@@ -72,6 +72,19 @@
     }
 }
 
+@media (min-width: 992px) and (max-width:1080px) { /* tab mode*/
+  .custom-hr {
+    width: 2% !important;
+    background-image: url('../static/brand/line-hr.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1px;
+  }
+
+  ._bthe_page_title {
+    font-size: 3rem !important;
+  }
+}
 .custom-hr {
     background-image: url('../static/brand/line-hr.svg');
     background-repeat: no-repeat;
