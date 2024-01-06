@@ -93,7 +93,7 @@ class webcontroller extends Controller
         ->first(); 
     
     return (new View)
-        ->template('pages.pmusicVideo')
+        ->template('pages.pMusicVideo')
         ->layout('default')
         ->with([
             'title' => $entry->get('title'),
