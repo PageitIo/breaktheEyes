@@ -7832,17 +7832,17 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v4.39.0",
-            "version_normalized": "4.39.0.0",
+            "version": "v4.42.1",
+            "version_normalized": "4.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "58b24a939fce9cf95405e64034f9a6822bbae5c2"
+                "reference": "207b5443114ebc5ab19da2f43faaf2b2b8fc967d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/58b24a939fce9cf95405e64034f9a6822bbae5c2",
-                "reference": "58b24a939fce9cf95405e64034f9a6822bbae5c2",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/207b5443114ebc5ab19da2f43faaf2b2b8fc967d",
+                "reference": "207b5443114ebc5ab19da2f43faaf2b2b8fc967d",
                 "shasum": ""
             },
             "require": {
@@ -7881,7 +7881,7 @@
                 "orchestra/testbench": "^7.0 || ^8.0",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2023-12-07T21:54:51+00:00",
+            "time": "2024-01-04T21:16:01+00:00",
             "type": "library",
             "extra": {
                 "download-dist": [
@@ -7926,7 +7926,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v4.39.0"
+                "source": "https://github.com/statamic/cms/tree/v4.42.1"
             },
             "funding": [
                 {
